@@ -6,14 +6,12 @@ namespace ConsoleApp
 {
    class Program
    {
-      static void Main(string[] args)
+      static void Main()
       {
-         string logPath = Path.Combine(
-            Environment.GetFolderPath(Environment.SpecialFolder.Desktop),
-            "console_debug.log");
+         string logPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop), "console_debug.log");
 
          // Пишем всё, что происходит, в файл на рабочем столе
-         File.AppendAllText(logPath, $"[{DateTime.Now}] Запуск консоли...\n");
+         File.AppendAllText(logPath, string.Format("[{0}] Запуск консоли...\n", DateTime.Now));
 
          try
          {
@@ -32,7 +30,7 @@ namespace ConsoleApp
          }
          catch (Exception ex)
          {
-            File.AppendAllText(logPath, $"ОШИБКА: {ex}\n");
+            File.AppendAllText(logPath, string.Format("ОШИБКА: {0}\n", ex));
             Console.WriteLine("Произошла ошибка! Подробности в файле на рабочем столе.");
             Console.ReadKey(); // окно не закроется
          }
