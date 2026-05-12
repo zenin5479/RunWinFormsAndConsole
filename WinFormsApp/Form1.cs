@@ -15,35 +15,38 @@ namespace WinFormsApp
       private void Form1_Load(object sender, EventArgs e)
       {
          // При загрузке формы сразу запускаем консольное приложение
-         StartConsoleApp();
+         //StartConsoleApp();
       }
 
       // Пример: кнопка для повторного запуска (на форме есть Button button1)
       private void button1_Click(object sender, EventArgs e)
       {
-         StartConsoleApp();
+         StartConsoleApp();   // запуск только по кнопке
       }
 
       private void StartConsoleApp()
       {
+         string folder = AppDomain.CurrentDomain.BaseDirectory;
+         string consoleAppPath = Path.Combine(folder, "ConsoleApp.exe");
+
+         // Проверка на всякий случай (можно оставить без MessageBox)
+         if (!File.Exists(consoleAppPath))
+         {
+            MessageBox.Show($"Файл не найден:\n{consoleAppPath}", "Ошибка");
+            return;
+         }
+
          try
          {
-            // Берём путь к папке, где лежит наш WinForms.exe
-            string folder = AppDomain.CurrentDomain.BaseDirectory;
-            if (folder != null)
-            {
-               string consoleAppPath = Path.Combine(folder, "ConsoleApp.exe");
-
-               Process process = new Process();
-               process.StartInfo.FileName = consoleAppPath;
-               process.StartInfo.UseShellExecute = true;
-               process.StartInfo.CreateNoWindow = false;
-               process.Start();
-            }
+            Process process = new Process();
+            process.StartInfo.FileName = consoleAppPath;
+            process.StartInfo.UseShellExecute = true;
+            process.StartInfo.CreateNoWindow = false;
+            process.Start();
          }
          catch (Exception ex)
          {
-            MessageBox.Show("Не удалось запустить консоль: " + ex.Message);
+            MessageBox.Show($"Ошибка при запуске:\n{ex.Message}", "Ошибка");
          }
       }
    }
