@@ -27,26 +27,29 @@ namespace WinFormsApp
       private void StartConsoleApp()
       {
          string folder = AppDomain.CurrentDomain.BaseDirectory;
-         string consoleAppPath = Path.Combine(folder, "ConsoleApp.exe");
+         if (folder != null)
+         {
+            string consoleAppPath = Path.Combine(folder, "ConsoleApp.exe");
 
-         // Проверка на всякий случай (можно оставить без MessageBox)
-         if (!File.Exists(consoleAppPath))
-         {
-            MessageBox.Show($"Файл не найден:\n{consoleAppPath}", "Ошибка");
-            return;
-         }
+            // Проверка на всякий случай (можно оставить без MessageBox)
+            if (!File.Exists(consoleAppPath))
+            {
+               MessageBox.Show(string.Format(@"Файл не найден:{0}", consoleAppPath), @"Ошибка");
+               return;
+            }
 
-         try
-         {
-            Process process = new Process();
-            process.StartInfo.FileName = consoleAppPath;
-            process.StartInfo.UseShellExecute = true;
-            process.StartInfo.CreateNoWindow = false;
-            process.Start();
-         }
-         catch (Exception ex)
-         {
-            MessageBox.Show($"Ошибка при запуске:\n{ex.Message}", "Ошибка");
+            try
+            {
+               Process process = new Process();
+               process.StartInfo.FileName = consoleAppPath;
+               process.StartInfo.UseShellExecute = true;
+               process.StartInfo.CreateNoWindow = false;
+               process.Start();
+            }
+            catch (Exception ex)
+            {
+               MessageBox.Show(string.Format(@"Ошибка при запуске:{0}", ex.Message), @"Ошибка");
+            }
          }
       }
    }
