@@ -28,7 +28,7 @@ namespace ConsoleApp
             Console.ReadKey();
             //File.AppendAllText(logPath, "Программа завершена нормально.\n");
          }
-         catch (Exception ex)
+         catch
          {
             //File.AppendAllText(logPath, string.Format("ОШИБКА: {0}\n", ex));
             Console.WriteLine("Произошла ошибка! Подробности в файле на рабочем столе.");
