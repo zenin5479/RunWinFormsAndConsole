@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Diagnostics;
+using System.IO;
 using System.Windows.Forms;
 
 namespace WinFormsApp
@@ -27,14 +28,18 @@ namespace WinFormsApp
       {
          try
          {
-            // Укажите правильный путь к скомпилированному .exe консольного приложения
-            string consoleAppPath = @"..\..\..\..\ConsoleApp\bin\Debug\netcoreapp3.1\ConsoleApp.exe";
+            // Берём путь к папке, где лежит наш WinForms.exe
+            string folder = AppDomain.CurrentDomain.BaseDirectory;
+            if (folder != null)
+            {
+               string consoleAppPath = Path.Combine(folder, "ConsoleApp.exe");
 
-            Process process = new Process();
-            process.StartInfo.FileName = consoleAppPath;
-            process.StartInfo.UseShellExecute = true;   // открыть в отдельном окне
-            process.StartInfo.CreateNoWindow = false;   // показывать окно консоли
-            process.Start();
+               Process process = new Process();
+               process.StartInfo.FileName = consoleAppPath;
+               process.StartInfo.UseShellExecute = true;
+               process.StartInfo.CreateNoWindow = false;
+               process.Start();
+            }
          }
          catch (Exception ex)
          {
