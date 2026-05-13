@@ -15,7 +15,7 @@ namespace ConsoleApp
             logPath = Path.Combine(folder, "console_debug.log");
          }
 
-         // Пишем всё, что происходит, в файл на рабочем столе
+         // Пишем что происходит в файл
          File.AppendAllText(logPath, string.Format("[{0}] Запуск консоли...\n", DateTime.Now));
 
          try
