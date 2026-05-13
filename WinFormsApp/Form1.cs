@@ -12,7 +12,7 @@ namespace WinFormsApp
          InitializeComponent();
       }
 
-      // Пример: кнопка для повторного запуска (на форме есть Button button1)
+      // Кнопка для запуска Console
       private void button1_Click(object sender, EventArgs e)
       {
          // Запуск только по кнопке
