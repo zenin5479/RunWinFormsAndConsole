@@ -16,13 +16,6 @@ namespace ConsoleApp
             // Пишем что происходит в файл
             File.AppendAllText(logPath, string.Format("[{0}] Запуск консоли...\n", DateTime.Now));
 
-            // Проверка на наличие ConsoleApp.exe
-            if (!File.Exists(consoleAppPath))
-            {
-               MessageBox.Show(string.Format(@"Файл не найден:{0}", consoleAppPath), @"Ошибка");
-               
-            }
-
             try
             {
                // Гарантированно держим окно открытым несколько секунд
