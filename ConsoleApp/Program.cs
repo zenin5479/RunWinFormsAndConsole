@@ -15,8 +15,6 @@ namespace ConsoleApp
             logPath = Path.Combine(folder, "console_debug.log");
          }
 
-         //string logPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop), "console_debug.log");
-
          // Пишем всё, что происходит, в файл на рабочем столе
          File.AppendAllText(logPath, string.Format("[{0}] Запуск консоли...\n", DateTime.Now));
 
