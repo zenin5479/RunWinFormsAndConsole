@@ -46,7 +46,7 @@
          // 
          AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
          AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-         ClientSize = new System.Drawing.Size(234, 80);
+         ClientSize = new System.Drawing.Size(234, 81);
          Controls.Add(button1);
          MaximizeBox = false;
          MinimizeBox = false;
