@@ -31,7 +31,7 @@ namespace ConsoleApp
             // Только после этого ждём нажатия клавиши
             Console.WriteLine("Нажмите любую клавишу для выхода...");
             Console.ReadKey();
-            File.AppendAllText(logPath, "Программа завершена нормально.\n");
+            File.AppendAllText(logPath, "Программа завершена нормально\n");
          }
          catch (Exception ex)
          {
