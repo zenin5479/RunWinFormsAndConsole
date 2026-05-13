@@ -15,7 +15,6 @@ namespace WinFormsApp
       // Кнопка для запуска Console
       private void button1_Click(object sender, EventArgs e)
       {
-         // Запуск только по кнопке
          StartConsoleApp();   
       }
 
@@ -26,7 +25,7 @@ namespace WinFormsApp
          {
             string consoleAppPath = Path.Combine(folder, "ConsoleApp.exe");
 
-            // Проверка на всякий случай (можно оставить без MessageBox)
+            // Проверка на наличие ConsoleApp.exe
             if (!File.Exists(consoleAppPath))
             {
                MessageBox.Show(string.Format(@"Файл не найден:{0}", consoleAppPath), @"Ошибка");
