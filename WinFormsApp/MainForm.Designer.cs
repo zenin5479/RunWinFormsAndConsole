@@ -41,13 +41,14 @@
          button1.UseVisualStyleBackColor = true;
          button1.Click += button1_Click;
          // 
-         // Form1
+         // MainForm
          // 
          AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
          AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
          ClientSize = new System.Drawing.Size(412, 325);
          Controls.Add(button1);
-         Name = "Form1";
+         Name = "MainForm";
+         StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
          Text = "Form1";
          ResumeLayout(false);
       }
