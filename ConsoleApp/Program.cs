@@ -36,7 +36,7 @@ namespace ConsoleApp
          catch (Exception ex)
          {
             File.AppendAllText(logPath, string.Format("ОШИБКА: {0}\n", ex));
-            Console.WriteLine("Произошла ошибка! Подробности в файле на рабочем столе.");
+            Console.WriteLine("Произошла ошибка! Подробности в файле console_debug.log");
             // Окно не закроется
             Console.ReadKey();
          }
