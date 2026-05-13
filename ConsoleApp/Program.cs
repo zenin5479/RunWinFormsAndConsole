@@ -8,14 +8,14 @@ namespace ConsoleApp
    {
       static void Main()
       {
+         string logPath = null;
          string folder = AppDomain.CurrentDomain.BaseDirectory;
          if (folder != null)
          {
-            string consoleAppPath = Path.Combine(folder, "ConsoleApp.exe");
+            logPath = Path.Combine(folder, "console_debug.log");
          }
 
-
-         string logPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop), "console_debug.log");
+         //string logPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop), "console_debug.log");
 
          // Пишем всё, что происходит, в файл на рабочем столе
          File.AppendAllText(logPath, string.Format("[{0}] Запуск консоли...\n", DateTime.Now));
@@ -28,7 +28,7 @@ namespace ConsoleApp
             File.AppendAllText(logPath, "Консоль запущена успешно.\n");
 
             // Даже если дальше будет исключение, окно останется открытым из-за задержки
-            Thread.Sleep(5000); 
+            Thread.Sleep(5000);
 
             // Только после этого ждём нажатия клавиши
             Console.WriteLine("Нажмите любую клавишу для выхода...");
@@ -40,7 +40,7 @@ namespace ConsoleApp
             File.AppendAllText(logPath, string.Format("ОШИБКА: {0}\n", ex));
             Console.WriteLine("Произошла ошибка! Подробности в файле на рабочем столе.");
             // Окно не закроется
-            Console.ReadKey(); 
+            Console.ReadKey();
          }
       }
    }
