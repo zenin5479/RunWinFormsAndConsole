@@ -49,7 +49,7 @@
          Controls.Add(button1);
          Name = "MainForm";
          StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-         Text = "Form1";
+         Text = "Запуск Console из WinForms";
          ResumeLayout(false);
       }
 
