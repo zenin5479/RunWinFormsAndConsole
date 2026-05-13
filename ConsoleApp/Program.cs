@@ -8,11 +8,10 @@ namespace ConsoleApp
    {
       static void Main()
       {
-         string logPath = null;
          string folder = AppDomain.CurrentDomain.BaseDirectory;
          if (folder != null)
          {
-            logPath = Path.Combine(folder, "console_debug.log");
+            string logPath = Path.Combine(folder, "console_debug.log");
             // Пишем что происходит в файл
             File.AppendAllText(logPath, string.Format("[{0}] Запуск консоли...\n", DateTime.Now));
 
