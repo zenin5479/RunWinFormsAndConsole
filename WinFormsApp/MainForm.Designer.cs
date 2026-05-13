@@ -28,26 +28,26 @@
       /// </summary>
       private void InitializeComponent()
       {
-         button1 = new System.Windows.Forms.Button();
+         ButtonRunConsole = new System.Windows.Forms.Button();
          SuspendLayout();
          // 
-         // button1
+         // ButtonRunConsole
          // 
-         button1.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-         button1.Location = new System.Drawing.Point(12, 12);
-         button1.Name = "button1";
-         button1.Size = new System.Drawing.Size(210, 37);
-         button1.TabIndex = 0;
-         button1.Text = "Запустить Console";
-         button1.UseVisualStyleBackColor = true;
-         button1.Click += button1_Click;
+         ButtonRunConsole.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+         ButtonRunConsole.Location = new System.Drawing.Point(12, 12);
+         ButtonRunConsole.Name = "ButtonRunConsole";
+         ButtonRunConsole.Size = new System.Drawing.Size(210, 37);
+         ButtonRunConsole.TabIndex = 0;
+         ButtonRunConsole.Text = "Запустить Console";
+         ButtonRunConsole.UseVisualStyleBackColor = true;
+         ButtonRunConsole.Click += button1_Click;
          // 
          // MainForm
          // 
          AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
          AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
          ClientSize = new System.Drawing.Size(234, 61);
-         Controls.Add(button1);
+         Controls.Add(ButtonRunConsole);
          MaximizeBox = false;
          MinimizeBox = false;
          Name = "MainForm";
@@ -58,6 +58,6 @@
 
       #endregion
 
-      private System.Windows.Forms.Button button1;
+      private System.Windows.Forms.Button ButtonRunConsole;
    }
 }
