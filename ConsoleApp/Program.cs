@@ -8,6 +8,13 @@ namespace ConsoleApp
    {
       static void Main()
       {
+         string folder = AppDomain.CurrentDomain.BaseDirectory;
+         if (folder != null)
+         {
+            string consoleAppPath = Path.Combine(folder, "ConsoleApp.exe");
+         }
+
+
          string logPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop), "console_debug.log");
 
          // Пишем всё, что происходит, в файл на рабочем столе
