@@ -40,7 +40,7 @@
          ButtonRunConsole.TabIndex = 0;
          ButtonRunConsole.Text = "Запустить Console";
          ButtonRunConsole.UseVisualStyleBackColor = true;
-         ButtonRunConsole.Click += button1_Click;
+         ButtonRunConsole.Click += ButtonRunConsole_Click;
          // 
          // MainForm
          // 
