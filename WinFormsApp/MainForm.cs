@@ -15,7 +15,7 @@ namespace WinFormsApp
       // Кнопка для запуска Console
       private void button1_Click(object sender, EventArgs e)
       {
-         StartConsoleApp();   
+         StartConsoleApp();
       }
 
       private void StartConsoleApp()
