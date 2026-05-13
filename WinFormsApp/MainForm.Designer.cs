@@ -33,9 +33,10 @@
          // 
          // button1
          // 
+         button1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
          button1.Location = new System.Drawing.Point(12, 12);
          button1.Name = "button1";
-         button1.Size = new System.Drawing.Size(146, 45);
+         button1.Size = new System.Drawing.Size(146, 61);
          button1.TabIndex = 0;
          button1.Text = "Запустить Console";
          button1.UseVisualStyleBackColor = true;
