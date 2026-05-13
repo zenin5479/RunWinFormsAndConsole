@@ -1,1 +1,1 @@
-# RunWinFormsAndConsole
+# Запуск Console из WinForms
