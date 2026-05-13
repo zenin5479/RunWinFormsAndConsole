@@ -12,16 +12,11 @@ namespace WinFormsApp
          InitializeComponent();
       }
 
-      private void Form1_Load(object sender, EventArgs e)
-      {
-         // При загрузке формы сразу запускаем консольное приложение
-         //StartConsoleApp();
-      }
-
       // Пример: кнопка для повторного запуска (на форме есть Button button1)
       private void button1_Click(object sender, EventArgs e)
       {
-         StartConsoleApp();   // запуск только по кнопке
+         // Запуск только по кнопке
+         StartConsoleApp();   
       }
 
       private void StartConsoleApp()
