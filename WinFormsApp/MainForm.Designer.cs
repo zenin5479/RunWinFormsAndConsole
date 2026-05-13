@@ -49,6 +49,7 @@
          ClientSize = new System.Drawing.Size(412, 325);
          Controls.Add(button1);
          MaximizeBox = false;
+         MinimizeBox = false;
          Name = "MainForm";
          StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
          Text = "Запуск Console из WinForms";
