@@ -18,7 +18,7 @@ namespace ConsoleApp
             try
             {
                // Гарантированно держим окно открытым несколько секунд
-               Console.Title = "ДИАГНОСТИКА – НЕ ЗАКРЫВАТЬ";
+               Console.Title = "Диагностика – не ЗАКРЫВАТЬ";
                Console.WriteLine("Консоль запущена и будет ждать 5 секунд");
                File.AppendAllText(logPath, "Консоль запущена успешно\n");
 
